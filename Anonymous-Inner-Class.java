@@ -17,3 +17,27 @@ Everything inside those highlighted {} curly braces is the body of a anonymous i
 
 
 Since an anonymous inner class has no name, you can never write a constructor for it (because in Java, constructors must match the class name).
+
+**********************************************************************************************************************************************************************
+ 
+public class A{
+
+public void show(){
+IO.println("show in class A");
+}
+
+}
+
+void main(){
+    
+    A a = new A(){
+        // THIS IS ANONYMOUS INNER CLASS
+        @Override
+        public void show(){
+            IO.println("show in anonymous inner class");
+        }
+
+    };
+    a.show();
+    
+}

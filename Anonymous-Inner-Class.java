@@ -18,18 +18,19 @@ Everything inside those highlighted {} curly braces is the body of a anonymous i
 
 Since an anonymous inner class has no name, you can never write a constructor for it (because in Java, constructors must match the class name).
 
+
+When we have an abstract class, we cannot directly instantiate an object from it. However, when we use an anonymous inner class, it doesn't give a compiler error. 
+
 **********************************************************************************************************************************************************************
  
-public class A{
+abstract public class A{
 
-public void show(){
-IO.println("show in class A");
-}
+abstract public void show();
 
 }
 
 void main(){
-    
+
     A a = new A(){
         // THIS IS ANONYMOUS INNER CLASS
         @Override
@@ -39,5 +40,5 @@ void main(){
 
     };
     a.show();
-    
+
 }
